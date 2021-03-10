@@ -138,11 +138,11 @@ p {
 
 @keyframes animate-feature-in {
   0% {
-    transform: translate(calc(var(--diffX)), calc(var(--diffY)));
-    -webkit-transform: translate(calc(var(--diffX)), calc(var(--diffY)));
-    -moz-transform: translate(calc(var(--diffX)), calc(var(--diffY)));
-    -ms-transform: translate(calc(var(--diffX)), calc(var(--diffY)));
-    -o-transform: translate(calc(var(--diffX)), calc(var(--diffY)));
+    transform: translate((var(--diffX)), (var(--diffY)));
+    -webkit-transform: translate((var(--diffX)), (var(--diffY)));
+    -moz-transform: translate((var(--diffX)), (var(--diffY)));
+    -ms-transform: translate((var(--diffX)), (var(--diffY)));
+    -o-transform: translate((var(--diffX)), (var(--diffY)));
   }
   100% {
     transform: translate(0, 0);
@@ -159,10 +159,10 @@ p {
     transform: translate(0, 0);
   }
   100% {
-    transform: translate(calc(var(--diffX)), calc(var(--diffY)));
-    -webkit-transform: translate(calc(var(--diffX)), calc(var(--diffY)));
-    -moz-transform: translate(calc(var(--diffX)), calc(var(--diffY)));
-    -ms-transform: translate(calc(var(--diffX)), calc(var(--diffY)));
-    -o-transform: translate(calc(var(--diffX)), calc(var(--diffY)));
+    transform: translate((var(--diffX)), (var(--diffY)));
+    -webkit-transform: translate((var(--diffX)), (var(--diffY)));
+    -moz-transform: translate((var(--diffX)), (var(--diffY)));
+    -ms-transform: translate((var(--diffX)), (var(--diffY)));
+    -o-transform: translate((var(--diffX)), (var(--diffY)));
   }
 }

@@ -43,15 +43,12 @@ function toggleOption(event) {
     const start = target.getBoundingClientRect();
     const end = newfeatureElement.getBoundingClientRect();
 
-    const diffX = start.X - end.X;
-    const diffY = start.Y - end.Y;
-
+    const diffX = start.X - end.X + "px";
+    const diffY = start.Y - end.Y + "px";
+    newfeatureElement.offsetHeight;
     newfeatureElement.style.setProperty("--diffX", diffX);
     newfeatureElement.style.setProperty("--diffY", diffY);
     newfeatureElement.offsetHeight;
-    //Animation feature in
-    // newfeatureElement.classList.add("animate-feature-in");
-    //*** */
   } else {
     features[featureImg] = false;
     target.parentElement.classList.remove("chosen");
