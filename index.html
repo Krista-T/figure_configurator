@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Figure Configurator</title>
+  </head>
+  <body>
+    <h1>Figure configurator</h1>
+    <p>
+      Welcome to the figure-configurator. Please select colors and features you
+      want for your figure.
+    </p>
+    <!-- <svg viewbox="0 0 800 200">
+      <rect
+        class="color_btn"
+        x="80"
+        width="75
+      "
+        height="75
+      "
+        fill="red"
+      />
+      <rect
+        class="color_btn"
+        x="160"
+        width="75
+      "
+        height="75
+      "
+        fill="blue"
+      />
+      <rect
+        class="color_btn"
+        x="240"
+        width="75
+      "
+        height="75
+      "
+        fill="green"
+      />
+      <rect
+        class="color_btn"
+        x="320"
+        width="75
+      "
+        height="75
+      "
+        fill="yellow"
+      />
+      <rect
+        class="color_btn"
+        x="400"
+        width="75
+      "
+        height="75
+      "
+        fill="grey"
+      />
+      <rect
+        class="color_btn"
+        x="480"
+        width="75
+      "
+        height="75
+      "
+        fill="black"
+      />
+      <rect
+        class="color_btn"
+        x="560"
+        width="75
+      "
+        height="75
+      "
+        fill="pink"
+      />
+      <rect
+        class="color_btn"
+        x="640"
+        width="75
+      "
+        height="75
+      "
+        fill="bisque"
+      />
+    </svg> -->
+
+    <div id="configurator">
+      <div id="product-preview">
+        <img
+          class="figure"
+          src="/img/figure1.png"
+          alt="lego_figure"
+          data-feature="figure"
+        />
+
+        <img src="/img/beanie.png" alt="" class="hide" data-feature="beanie" />
+        <img src="/img/radio.png" alt="" class="hide" data-feature="radio" />
+        <!-- <img
+          src="/img/blackShort_.png"
+          alt=""
+          class="hide"
+          data-feature="shortHair"
+        /> -->
+        <!-- <img
+          src="/img/calculator.png"
+          alt=""
+          class=""
+          data-feature="calculator"
+        /> -->
+
+        <img
+          src="/img/metalHair.png"
+          alt=""
+          class="hide"
+          data-feature="metalHair"
+        />
+        <img src="/img/guitar.png" alt="" class="hide" data-feature="guitar" />
+        <img src="/img/pirate.png" alt="" class="hide" data-feature="pirate" />
+        <img src="/img/bird.png" alt="" class="hide" data-feature="bird" />
+      </div>
+
+      <div id="options">
+        Choose Add-on
+        <figure class="option">
+          <img src="/img/beanie.png" alt="beanie" data-name="beanie" />
+          <figcaption>Beanie</figcaption>
+        </figure>
+        <figure class="option">
+          <img src="/img/radio.png" alt="radio" data-name="radio" />
+          <figcaption>Boombox</figcaption>
+        </figure>
+
+        <figure class="option">
+          <img src="/img/metalHair.png" alt="hair" data-name="metalHair" />
+          <figcaption>Long Hair</figcaption>
+        </figure>
+
+        <figure class="option">
+          <img src="/img/guitar.png" alt="guitar" data-name="guitar" />
+          <figcaption>Guitar</figcaption>
+        </figure>
+
+        <figure class="option">
+          <img src="/img/pirate.png" alt="hair" data-name="pirate" />
+          <figcaption>Pirate Hat</figcaption>
+        </figure>
+        <figure class="option">
+          <img src="/img/bird.png" alt="bird" data-name="bird" />
+          <figcaption>Pirate Companion</figcaption>
+        </figure>
+      </div>
+      <div id="selected">
+        selected:
+        <ul>
+          <!-- featureElements are added here! -->
+        </ul>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+  <!-- <script src="color.js"></script> -->
+</html>
