@@ -82,9 +82,6 @@ function toggleOption(event) {
     });
   }
 
-  // - create FLIP-animation to animate featureElement from img in target, to
-  //  its intended position. Do it with normal animation or transition class!
-
   // createFeatureElement(featureImg);
 }
 function createFeatureElement(feature) {
@@ -95,10 +92,6 @@ function createFeatureElement(feature) {
   img.src = `./img/${feature}.png`;
   img.alt = capitalize(feature);
   li.append(img);
-
-  // - find the existing featureElement in #selected ul
-  // - create FLIP-animation to animate featureElement to img in target
-  // - when animation is complete, remove featureElement from the DOM
   return li;
 }
 
