@@ -32,7 +32,6 @@ function toggleOption(event) {
       .querySelector(`[data-feature="${featureImg}"`)
       .classList.remove("hide");
 
-    //*** */
     //Call new featureElement function to create element and add it to the list
     const newfeatureElement = createFeatureElement(featureImg);
     document.querySelector("#selected ul").appendChild(newfeatureElement);
@@ -59,8 +58,6 @@ function toggleOption(event) {
     document
       .querySelector(`[data-feature="${featureImg}"`)
       .classList.add("hide");
-
-    //** */
 
     const theFeatureElement = document.querySelector(
       `#selected [data-feature="${featureImg}"]`
