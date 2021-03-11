@@ -31,24 +31,27 @@ function toggleOption(event) {
     document
       .querySelector(`[data-feature="${featureImg}"`)
       .classList.remove("hide");
-
     //Call new featureElement function to create element and add it to the list
     const newfeatureElement = createFeatureElement(featureImg);
     document.querySelector("#selected ul").appendChild(newfeatureElement);
-    console.log(newfeatureElement);
-    newfeatureElement.classList.add("animate-feature-in");
+    // console.log(newfeatureElement);
+
     // li item data-feature added
 
     //FLIP
     const start = target.getBoundingClientRect();
     const end = newfeatureElement.getBoundingClientRect();
 
-    const diffX = start.X - end.X + "px";
-    const diffY = start.Y - end.Y + "px";
-    newfeatureElement.offsetHeight;
-    newfeatureElement.style.setProperty("--diffX", diffX);
-    newfeatureElement.style.setProperty("--diffY", diffY);
-    newfeatureElement.offsetHeight;
+    const diffX = start.x - end.x;
+    const diffY = start.y - end.y;
+
+    newfeatureElement.style.setProperty("--diffX", diffX + "px");
+    newfeatureElement.style.setProperty("--diffY", diffY + "px");
+    // We animate here, after setting the coordinates
+    //newfeatureElement.offsetHeight;
+
+    newfeatureElement.classList.add("animate-feature-in");
+    // newfeatureElement.classList = 'animate-feature-in';
   } else {
     features[featureImg] = false;
     target.parentElement.classList.remove("chosen");
@@ -56,33 +59,33 @@ function toggleOption(event) {
       .querySelector(`[data-feature="${featureImg}"`)
       .classList.add("hide");
 
-    const theFeatureElement = document.querySelector(
-      `#selected [data-feature="${featureImg}"]`
+    const newfeatureElement = document.querySelector(
+      `#selected ul [data-feature="${featureImg}"]`
     );
 
-    const end = theFeatureElement.getBoundingClientRect();
+    //FLIP
     const start = target.getBoundingClientRect();
+    const end = newfeatureElement.getBoundingClientRect();
 
-    const diffX = start.X - end.X + "px";
-    const diffY = start.Y - end.Y + "px";
+    const diffX = start.x - end.x;
+    const diffY = start.y - end.y;
+    console.log(diffX, diffY);
 
-    theFeatureElement.style.setProperty("--diffX", diffX);
-    theFeatureElement.style.setProperty("--diffY", diffY);
-    theFeatureElement.offsetHeight;
+    newfeatureElement.style.setProperty("--diffX", diffX + "px");
+    newfeatureElement.style.setProperty("--diffY", diffY + "px");
+    newfeatureElement.offsetHeight;
 
     //Animation feature out
-    theFeatureElement.classList.add("animate-feature-out");
+    newfeatureElement.classList.add("animate-feature-out");
     //when animation is complete, remove featureElement from the DOM
-    theFeatureElement.addEventListener("animationend", function () {
-      theFeatureElement.remove();
+    newfeatureElement.addEventListener("animationend", function () {
+      newfeatureElement.remove();
       //Chose the feature element and hide it
       document
         .querySelector(`[data-feature=${featureImg}`)
         .classList.add("hide");
     });
   }
-
-  // createFeatureElement(featureImg);
 }
 function createFeatureElement(feature) {
   const li = document.createElement("li");

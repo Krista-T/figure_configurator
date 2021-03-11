@@ -119,10 +119,13 @@ p {
 
 #selected ul {
   list-style-type: none;
+  display: flex;
 }
 
 #selected ul li {
-  display: inline;
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
 }
 
 #selected ul li img {
@@ -131,38 +134,33 @@ p {
 
 /* Animation classes */
 
+/* Create animation for adding a feature */
 .animate-feature-in {
-  animation: animate-feature-in 1s ease-in-out;
-  -webkit-animation: animate-feature-in 1s ease-in-out;
+  animation: animate-in 1.2s;
+  animation-iteration-count: 1;
 }
 
-@keyframes animate-feature-in {
+@keyframes animate-in {
   0% {
-    transform: translate((var(--diffX)), (var(--diffY)));
-    -webkit-transform: translate((var(--diffX)), (var(--diffY)));
-    -moz-transform: translate((var(--diffX)), (var(--diffY)));
-    -ms-transform: translate((var(--diffX)), (var(--diffY)));
-    -o-transform: translate((var(--diffX)), (var(--diffY)));
+    transform: translate(var(--diffX), var(--diffY));
   }
   100% {
     transform: translate(0, 0);
   }
 }
 
+/* Create animation for adding a feature */
 .animate-feature-out {
-  animation: animate-feature-out 1s ease-out;
-  -webkit-animation: animate-feature-out 1s ease-out;
+  animation: animate-out 1.2s;
+  animation-iteration-count: 1;
 }
 
-@keyframes animate-feature-out {
+@keyframes animate-out {
   0% {
     transform: translate(0, 0);
   }
   100% {
-    transform: translate((var(--diffX)), (var(--diffY)));
-    -webkit-transform: translate((var(--diffX)), (var(--diffY)));
-    -moz-transform: translate((var(--diffX)), (var(--diffY)));
-    -ms-transform: translate((var(--diffX)), (var(--diffY)));
-    -o-transform: translate((var(--diffX)), (var(--diffY)));
+    transform: translate(var(--diffX), var(--diffY));
+    opacity: 0;
   }
 }
